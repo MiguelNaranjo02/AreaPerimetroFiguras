@@ -8,13 +8,13 @@ import java.util.ArrayList;
  * @author migue
  */
 public class Poligono extends Figura{
-ArrayList<Double> puntosX= new ArrayList();
-ArrayList<Double> puntosY= new ArrayList();
-ArrayList<Double> auxX;
-ArrayList<Double> auxY;
+public ArrayList<Double> puntosX= new ArrayList();
+public ArrayList<Double> puntosY= new ArrayList();
+public ArrayList<Double> auxX;
+public ArrayList<Double> auxY;
    
 @Override
-    void calcularArea() {
+   public void calcularArea() {
 for (int i=0;i<auxX.size()-1;i++){
            area=area+(auxX.get(i)*auxY.get(i+1))-(auxY.get(i)*auxX.get(i+1));
        }
@@ -22,7 +22,7 @@ for (int i=0;i<auxX.size()-1;i++){
     }
 
     @Override
-    void calcularPerimetro() {
+  public  void calcularPerimetro() {
        for(int i=0;i<puntosX.size();i++){
           perimetro=perimetro+Math.sqrt(Math.pow(auxX.get(i+1)-auxX.get(i),2)+Math.pow(auxY.get(i+1)-auxY.get(i), 2));
        }
@@ -39,9 +39,5 @@ for (int i=0;i<auxX.size()-1;i++){
        auxY = (ArrayList) puntosY.clone();
        auxX.add(puntosX.get(0));
        auxY.add(puntosY.get(0));
-        calcularArea();
-        calcularPerimetro();
-    }
-
-    
+    }    
 }

@@ -6,23 +6,21 @@ package Figuras;
  * @author migue
  */
 public class Circulo extends Figura{
-private double radio;
+public double radio;
     @Override
-    void calcularArea() {
+  public  void calcularArea() {
         area=radio*radio*Math.PI;
        
     }
 
     @Override
-    void calcularPerimetro() {
+   public void calcularPerimetro() {
         perimetro=2*Math.PI*radio;
       
     }
 
     public Circulo(double radio) {
         this.radio = radio;
-        calcularArea();
-        calcularPerimetro();
     }
     
 }
